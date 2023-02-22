@@ -12,17 +12,12 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
+      function Greeting(props) {
+        return <p>Hei {props.name}</p>;
+      }
 
-        function Greeting(props){
-            return <p>Hei {props.name}</p>;
-        }
-
-        const element = <Greeting name="Alisa"/>;
-      ReactDOM.render(
-        element,
-        document.getElementById('root')
-      );
-
+      const element = <Greeting name="Alisa" />;
+      ReactDOM.render(element, document.getElementById("root"));
     </script>
     <!--
       Note: this page is a great way to try React but it's not suitable for production.
